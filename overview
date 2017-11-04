@@ -1,8 +1,52 @@
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="?template=css"/>
+		<link href="/static/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<title>MEYOUSIC - EVENTS</title>
 	</head>
 	<body>
-		overview
+		<img src="<?printx app.params.logo.value.url?>"></img>
+		<?for ds in datasources.values()?>
+			<?for a in ds.apps.values()?>
+				<?if a.records?>
+				<div class="column">
+					<?for (i, record) in enumerate(a.records.values(), 0)?>
+					<div class="element">
+						<?note TITLE?>
+						<?if record.fields.title.value?>
+							<p class="title"><?print record.fields.title.value?></p>
+						<?end if?>
+						<?note DATE?>
+						<?if record.fields.date.value?>
+							<p><?print record.fields.date.value?></p>
+						<?end if?>
+						<?note DESCRIPTION?>
+						<?if record.fields.description.value?>
+							<p class="descr"><?print record.fields.description.value?></p>
+						<?end if?>
+						<?note LOCATION?>
+						<?if record.fields.location.value.info?>
+							<?print record.fields.location.value.info?></br>
+						<?end if?>
+						<p class="button">
+							<?note MORE INFO BUTTON?>
+							<a href="/gateway/apps/<?print record.app.id?>/<?print record.id?>?template=detail" title="read more" target="_self">
+								<i class="fa fa-plus-circle" aria-hidden="true"></i>
+							</a>
+							<?note ADD TO CALENDAR BUTTON?>
+							<a href="" title="participate" target="_self">
+								<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+							</a>
+						</p>
+					</div>
+					<?end for?>
+				</div>
+				<?end if?>
+			<?end for?>
+		<?end for?></br>
+		<p>
+			<a target="_self" href="https://my.living-apps.de/gateway/apps/59e8dbe6ceb4b6aaaf77f8e9/new?view=59e8dbe6094f026f5333fbb7">ADD EVENT</a>
+		</p>
 	</body>
 </html>
