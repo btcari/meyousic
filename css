@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Strait');
-body
-{
+body {
 	background: #414141;
 	text-align: center;
 	color: rgb(255, 255, 255);
@@ -9,7 +8,68 @@ body
 	font-weight: normal;
 	line-height: 1.5;
 }
-h1
-{
+
+h1 {
 	font-size: 22px;
 }
+
+a {
+	font-size: 2em;
+	padding: 1% 2%;
+	background-color: rgb(255, 192, 0);
+	color: rgb(50, 50, 50);
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+iframe {
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	border: 0;
+}
+
+div.element {
+	height: auto;
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 7px 7px 7px 7px;
+	display: inline-block;
+	width: 100%;
+	margin-top: 3%;
+}
+
+div.column {
+	vertical-align:middle;
+	margin-left: 5%;
+	margin-right: 5%;
+	-webkit-columns: 6 200px;
+	-moz-columns: 6 200px;
+	columns: 6 200px;
+}
+
+p {
+	margin: 0;
+}
+
+p.title {
+	text-transform: uppercase;
+	color: rgb(255, 192, 0);
+	font-size: 18px;
+}
+
+p.descr {
+	text-transform: uppercase;
+	margin-bottom: 4;
+}
+
+p.button {
+	margin-bottom: 3%;
+}
+
+img {
+	max-width: 90%;
+]
