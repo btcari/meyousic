@@ -1,0 +1,7 @@
+<script>
+			$(function() {
+			if ('app' !== $('body').attr('id')) {
+				window.top.location.href = 'https://my.living-apps.de/gateway/apps/59e8dbe6ceb4b6aaaf77f8e9';
+		}
+	});
+</script>
