@@ -1,40 +1,47 @@
 <html>
 	<head>
+		<!-- Viewport for responsive, integrate css- and font-awesome-stylesheet-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="?template=css"/>
 		<link href="/static/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<!-- set title -->
 		<title>MEYOUSIC - EVENTS</title>
 	</head>
 	<body>
+		<!-- Include logo -->
 		<img src="<?printx app.params.logo.value.url?>"></img>
+		<!-- For loop through all datasources -->
 		<?for ds in datasources.values()?>
+			<!-- For loop through all apps -->
 			<?for a in ds.apps.values()?>
+				<!-- Check existence of data sets -->
 				<?if a.records?>
 				<div class="column">
+					<!-- Order data sets -->
 					<?for (i, record) in enumerate(a.records.values(), 0)?>
 					<div class="element">
-						<?note TITLE?>
+						<!-- Check existence of title value and print -->
 						<?if record.fields.title.value?>
 							<p class="title"><?print record.fields.title.value?></p>
 						<?end if?>
-						<?note DATE?>
+						<!-- Check existence of date value and print -->
 						<?if record.fields.date.value?>
 							<p><?print record.fields.date.value?></p>
 						<?end if?>
-						<?note DESCRIPTION?>
+						<!-- Check existence of note value and print -->
 						<?if record.fields.description.value?>
 							<p class="descr"><?print record.fields.description.value?></p>
 						<?end if?>
-						<?note LOCATION?>
+						<!-- Check existence of location value and print -->
 						<?if record.fields.location.value.info?>
 							<?print record.fields.location.value.info?></br>
 						<?end if?>
 						<p class="button">
-							<?note MORE INFO BUTTON?>
+							<!-- "More information" button -->
 							<a href="/gateway/apps/<?print record.app.id?>/<?print record.id?>?template=detail" title="read more" target="_self">
 								<i class="fa fa-plus-circle" aria-hidden="true"></i>
 							</a>
-							<?note ADD TO CALENDAR BUTTON?>
+							<!-- "Participate" button-->
 							<a href="" title="participate" target="_self">
 								<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
 							</a>
@@ -46,7 +53,8 @@
 			<?end for?>
 		<?end for?></br>
 		<p>
-			<a target="_self" href="https://my.living-apps.de/gateway/apps/59e8dbe6ceb4b6aaaf77f8e9/new?view=59e8dbe6094f026f5333fbb7">ADD EVENT</a>
+			<!-- "Create new event" button -->
+			<a target="_self" href="https://my.living-apps.de/gateway/apps/59e8dbe6ceb4b6aaaf77f8e9/new?view=59e8dbe6094f026f5333fbb7">CREATE EVENT</a>
 		</p>
 	</body>
 </html>
