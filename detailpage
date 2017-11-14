@@ -1,6 +1,6 @@
 <html>
 	<head>
-  	<!-- Viewport for responsive, integrate css- and font-awesome-stylesheet-->
+		<!-- Viewport for responsive, integrate css- and font-awesome-stylesheet-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="?template=css"/>
 		<link href="/static/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -8,29 +8,44 @@
 		<title>MEYOUSIC - EVENTS</title>
 	</head>
 	<body>
-		<?if record.fields.title.value?>
-			<p class="title"><?print record.fields.title.value?></p>
-		<?end if?>
-		<!-- Check existence of date value and print -->
-		<?if record.fields.date.value?>
-			<p><?print record.fields.date.value?></p>
-		<?end if?>
-		<!-- Print number of people participating -->
-		<?print randrange(0, 3000, 1)?> people participating
-		<!-- Check existence of description value and print -->
-		<?if record.fields.description.value?>
-			<p class="descr"><?print record.fields.description.value?></p>
-		<?end if?>
-		<!-- Check existence of location value and print -->
-		<?if record.fields.location.value.info?>
-			<?print record.fields.location.value.info?></br>
-		<?end if?>
-		<!-- ADD EVENT TO CALENDAR BUTTON -->
-		<p class="button">
-			<a href="" title="participate" target="_self">
-				<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-			</a>
-		</p></br>
+					<!-- Check existence of title value and print -->
+					<?if record.fields.title.value?>
+						<p class="title"><?print record.fields.title.value?></p>
+					<?end if?>
+					<!-- Check existence of date value and print -->
+					<?if record.fields.date.value?>
+						<p><?print record.fields.date.value.mimeformat()?></p>
+					<?end if?>
+					<!-- Print number of people participating -->
+					<?print randrange(0, 3000, 1)?> PEOPLE PARTICIPATING
+					<!-- Check existence of description value and print -->
+					<?if record.fields.description.value?>
+						<p class="descr"><?print record.fields.description.value?></p>
+					<?end if?>
+					<!-- Check existence of location value and print -->
+					<?if record.fields.location.value.info?>
+						<p class="location"><?print record.fields.location.value.info?></p></br>
+					<?end if?>
+
+					<!-- ADD EVENT TO CALENDAR BUTTON -->
+					<p class="button">
+						<a href="" title="participate" target="_self">
+							<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+						</a>
+
+					<!-- BUY TICKET BUTTON -->
+					<!-- <p class="button"> -->
+						<a href="" title="buy your ticket" target="_self">
+							<i class="fa fa-ticket" aria-hidden="true"></i>
+						</a>
+					<!-- </p> -->
+					<!-- FIND HOUSING BUTTON -->
+					<!-- <p class="button"> -->
+						<a href="" title="find housing" target="_self">
+							<i class="fa fa-home" aria-hidden="true"></i>
+						</a>
+					</p>
+		</br>
 		<!-- BACK BUTTON -->
 		<p class="button">
 			<a href="/gateway/apps/<?print record.app.id?>" target="_self">
