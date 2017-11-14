@@ -28,9 +28,9 @@
 						<?if record.fields.date.value?>
 							<p><?print record.fields.date.value?></p>
 						<?end if?>
-						<!-- Check existence of note value and print -->
-						<?if record.fields.description.value?>
-							<p class="descr"><?print record.fields.description.value?></p>
+						<!-- Check existence of brief description value and print -->
+						<?if record.fields.brief_description.value?>
+							<p class="descr"><?print record.fields.brief_description.value?></p>
 						<?end if?>
 						<!-- Check existence of location value and print -->
 						<?if record.fields.location.value.info?>
