@@ -26,7 +26,7 @@
 						<?end if?>
 						<!-- Check existence of date value and print -->
 						<?if record.fields.date.value?>
-							<p><?print record.fields.date.value?></p>
+							<p><?print record.fields.date.value.mimeformat()?></p>
 						<?end if?>
 						<!-- Check existence of brief description value and print -->
 						<?if record.fields.brief_description.value?>
