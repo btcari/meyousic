@@ -1,17 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Strait');
-body {
-	background: #414141;
-	text-align: center;
-	color: rgb(255, 255, 255);
-	font-family: 'Strait', sans-serif;
-	font-size: .875rem;
-	font-weight: normal;
-	line-height: 1.5;
-}
-
-h1 {
-	font-size: 22px;
-}
 
 a {
 	font-size: 2em;
@@ -23,12 +10,14 @@ a {
 	display: inline-block;
 }
 
-iframe {
-	display: block;
-	height: 100%;
-	width: 100%;
-	margin: 0 auto;
-	border: 0;
+body {
+	background: #414141;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-family: 'Strait', sans-serif;
+	font-size: .875rem;
+	font-weight: normal;
+	line-height: 1.9;
 }
 
 div.element {
@@ -51,6 +40,22 @@ div.column {
 	columns: 6 200px;
 }
 
+h1 {
+	font-size: 22px;
+}
+
+iframe {
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	border: 0;
+}
+
+img {
+	max-width: 90%;
+}
+
 p {
 	margin: 0;
 }
@@ -62,14 +67,20 @@ p.title {
 }
 
 p.descr {
-	text-transform: uppercase;
 	margin-bottom: 4;
+	line-height: 1.2;
+}
+
+p.location {
+	text-transform: uppercase;
 }
 
 p.button {
 	margin-bottom: 3%;
 }
 
-img {
-	max-width: 90%;
-]
+table {
+	width: 90%;
+	line-height: 1.8;
+	text-align: center;
+}
