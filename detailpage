@@ -8,43 +8,43 @@
 		<title>MEYOUSIC - EVENTS</title>
 	</head>
 	<body>
-					<!-- Check existence of title value and print -->
-					<?if record.fields.title.value?>
-						<p class="title"><?print record.fields.title.value?></p>
-					<?end if?>
-					<!-- Check existence of date value and print -->
-					<?if record.fields.date.value?>
-						<p><?print record.fields.date.value.mimeformat()?></p>
-					<?end if?>
-					<!-- Print number of people participating -->
-					<?print randrange(0, 3000, 1)?> PEOPLE PARTICIPATING
-					<!-- Check existence of description value and print -->
-					<?if record.fields.description.value?>
-						<p class="descr"><?print record.fields.description.value?></p>
-					<?end if?>
-					<!-- Check existence of location value and print -->
-					<?if record.fields.location.value.info?>
-						<p class="location"><?print record.fields.location.value.info?></p></br>
-					<?end if?>
-
-					<!-- ADD EVENT TO CALENDAR BUTTON -->
-					<p class="button">
-						<a href="" title="participate" target="_self">
-							<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-						</a>
-
-					<!-- BUY TICKET BUTTON -->
-					<!-- <p class="button"> -->
-						<a href="" title="buy your ticket" target="_self">
-							<i class="fa fa-ticket" aria-hidden="true"></i>
-						</a>
-					<!-- </p> -->
-					<!-- FIND HOUSING BUTTON -->
-					<!-- <p class="button"> -->
-						<a href="" title="find housing" target="_self">
-							<i class="fa fa-home" aria-hidden="true"></i>
-						</a>
-					</p>
+		<!-- Check existence of title value and print -->
+		<?if record.fields.title.value?>
+			<p class="title"><?print record.fields.title.value?></p>
+		<?end if?>
+		<!-- Check existence of date value and print -->
+		<?if record.fields.date.value?>
+			<p><?print record.fields.date.value.mimeformat()?></p>
+		<?end if?>
+		<!-- Print number of people participating -->
+		<?print randrange(0, 3000, 1)?> PEOPLE PARTICIPATING
+		<!-- Check existence of description value and print -->
+		<?if record.fields.description.value?>
+			<p class="descr"><?print record.fields.description.value?></p>
+		<?end if?>
+		<!-- Check existence of location value and print -->
+		<?if record.fields.location.value.info?>
+			<p class="location"><?print record.fields.location.value.info?></p></br>
+		<?end if?>
+		<!-- BUTTONS -->
+		<!-- ADD EVENT TO CALENDAR BUTTON -->
+		<p class="button">
+			<a href="" title="participate" target="_self">
+				<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+			</a>
+		<!-- BUY TICKET BUTTON -->
+			<a href="" title="buy your ticket" target="_self">
+				<i class="fa fa-ticket" aria-hidden="true"></i>
+			</a>
+		<!-- FIND BLABLACAR BUTTON -->
+			<a href="" title="check blablacar" target="_self">
+				<i class="fa fa-car" aria-hidden="true"></i>
+			</a>
+		<!-- FIND HOUSING BUTTON -->
+			<a href="" title="find housing" target="_self">
+				<i class="fa fa-home" aria-hidden="true"></i>
+			</a>
+		</p>
 		</br>
 		<!-- BACK BUTTON -->
 		<p class="button">
