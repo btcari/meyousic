@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<!-- Include logo -->
-		<img src="<?printx app.params.logo.value.url?>"></img>
+		<a href="http://meyousic.strikingly.com/" target="_blank"><img src="<?printx app.params.logo.value.url?>"></img></a>
 		<!-- For loop through all datasources -->
 		<?for ds in datasources.values()?>
 			<!-- For loop through all apps -->
@@ -20,34 +20,34 @@
 				<div class="column">
 					<!-- Order data sets -->
 					<?for (i, record) in enumerate(a.records.values(), 0)?>
-					<div class="element">
-						<!-- Check existence of title value and print -->
-						<?if record.fields.title.value?>
-							<p class="title"><?print record.fields.title.value?></p>
-						<?end if?>
-						<!-- Check existence of date value and print -->
-						<?if record.fields.date.value?>
-							<p><?print record.fields.date.value.mimeformat()?></p>
-						<?end if?>
-						<!-- Check existence of brief description value and print -->
-						<?if record.fields.brief_description.value?>
-							<p class="descr"><?print record.fields.brief_description.value?></p>
-						<?end if?>
-						<!-- Check existence of location value and print -->
-						<?if record.fields.location.value.info?>
-							<?print record.fields.location.value.info?></br>
-						<?end if?>
-						<p class="button">
-							<!-- "More information" button -->
-							<a href="/gateway/apps/<?print record.app.id?>/<?print record.id?>?template=detail" title="read more" target="_self">
-								<i class="fa fa-plus-circle" aria-hidden="true"></i>
-							</a>
-							<!-- "Participate" button-->
-							<a href="" title="participate" target="_self">
-								<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-							</a>
-						</p>
-					</div>
+						<div class="element">
+							<!-- Check existence of title value and print -->
+							<?if record.fields.title.value?>
+								<p class="title"><?print record.fields.title.value?></p>
+							<?end if?>
+							<!-- Check existence of date value and print -->
+							<?if record.fields.date.value?>
+								<p><?print record.fields.date.value.mimeformat()?></p>
+							<?end if?>
+							<!-- Check existence of brief description value and print -->
+							<?if record.fields.brief_description.value?>
+								<p class="descr"><?print record.fields.brief_description.value?></p>
+							<?end if?>
+							<!-- Check existence of location value and print -->
+							<?if record.fields.location.value.info?>
+								<?print record.fields.location.value.info?></br>
+							<?end if?>
+							<p class="button">
+								<!-- "More information" button -->
+								<a href="/gateway/apps/<?print record.app.id?>/<?print record.id?>?template=detail" title="read more" target="_self">
+									<i class="fa fa-plus-circle" aria-hidden="true"></i>
+								</a>
+								<!-- "Participate" button-->
+								<a href="" title="participate" target="_self">
+									<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+								</a>
+							</p>
+						</div>
 					<?end for?>
 				</div>
 				<?end if?>
